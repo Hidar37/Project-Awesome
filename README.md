@@ -13,7 +13,7 @@
 - GitHub: [@Hidar37](https://github.com/Hidar37)
 
 👤 **Author2**
-- GitHub: [@kennankole](https://github.com/kennankole)
+- GitHub: [@Tamunokuro](https://github.com/Tamunokuro)
 
 ## Show your support
 
