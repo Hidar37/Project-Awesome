@@ -14,14 +14,18 @@
 
 <body>
   <main>
-    <h1 class="title">Awesome Books</h1>
-    <section id="book-store">
+    <section class="hero-container">
+      <h1 class="title">AWESOME BOOKS</h1>
+      <section id="book-store">
+      </section>
+        <form action="" id="adding-book-form" method="get">
+          <input type="text" id="title" placeholder="Enter the Book title." required>
+          <input type="text" id="author" placeholder="Enter the Author name." required>
+          <input type="submit" value="Add" id="add-btn">
+        </form>
+
     </section>
-      <form action="" id="adding-book-form" method="get">
-        <input type="text" id="title" placeholder="Enter the Book title." required>
-        <input type="text" id="author" placeholder="Enter the Author name." required>
-        <input type="submit" value="Add" id="add-btn">
-      </form>
+  
   </main>
   <!-- Add Book.js -->
   <script src="source/js/add-book.js"></script>

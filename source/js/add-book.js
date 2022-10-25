@@ -34,7 +34,9 @@ class AwesomeBook {
       const removeButton = document.createElement('button');
       bookItem.appendChild(document.createTextNode(`${item.title} by ${item.author}`));
       removeButton.setAttribute('class', 'remove');
-      removeButton.appendChild(document.createTextNode('remove'));
+      bookItem.setAttribute('class', 'book');
+      bookDiv.setAttribute('class', 'book-card');
+      removeButton.appendChild(document.createTextNode('Remove'));
       // Remove Button Logic
       this.removeBook(removeButton, bookData, index, bookDiv);
       bookDiv.append(bookItem, removeButton);
