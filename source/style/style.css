@@ -39,7 +39,7 @@ body {
 .title {
   text-align: center;
   font-size: 2rem;
-  margin: 20px 0px;
+  margin: 20px 0;
   padding: 5px;
   border-bottom: 1px solid #dcdcdc;
 }
@@ -47,7 +47,7 @@ body {
 #book-store {
   border: 2px solid #000;
   border-radius: 10px;
-  margin: 35px 0px;
+  margin: 35px 0;
 }
 
 .book-card {
@@ -112,5 +112,3 @@ input[type='text'] {
 #add-btn:hover {
   background-color: #2e7c51;
 }
-
-
