@@ -136,6 +136,7 @@ input[type='text'] {
   align-items: center;
   width: 80%;
   margin: 20px auto;
+  border-bottom: 1px solid #dcdcdc;
 }
 
 .nav-items {
@@ -196,4 +197,10 @@ footer {
   top: 90%;
   width: 100%;
   text-align: center;
+}
+
+/* Date */
+#date {
+  text-align: right;
+  margin-right: 9rem;
 }
