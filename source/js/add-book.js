@@ -6,6 +6,9 @@ const bookContainer = document.getElementById('book-store');
 const form = document.getElementById('adding-book-form');
 const bookTitle = document.getElementById('title');
 const bookAuthor = document.getElementById('author');
+const bookNav = document.getElementById('booklist');
+const addBookNav = document.getElementById('addbook');
+const contactNav = document.getElementById('contact');
 // const addBtn = document.getElementById('add-btn');
 let bookList = [];
 
@@ -70,4 +73,23 @@ if (localStorage.getItem('book') !== null) {
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   bookObj.displayBooks();
+});
+
+// Navigation
+bookNav.addEventListener('click', () => {
+  document.getElementById('book-list').style.display = 'block';
+  document.getElementById('add-book').style.display = 'none';
+  document.getElementById('contact-section').style.display = 'none';
+});
+
+addBookNav.addEventListener('click', () => {
+  document.getElementById('book-list').style.display = 'none';
+  document.getElementById('add-book').style.display = 'block';
+  document.getElementById('contact-section').style.display = 'none';
+});
+
+contactNav.addEventListener('click', () => {
+  document.getElementById('book-list').style.display = 'none';
+  document.getElementById('add-book').style.display = 'none';
+  document.getElementById('contact-section').style.display = 'block';
 });
