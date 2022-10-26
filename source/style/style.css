@@ -134,9 +134,9 @@ input[type='text'] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 95%;
   margin: 20px auto;
-  border-bottom: 1px solid #dcdcdc;
+  border: 1px solid #dcdcdc;
 }
 
 .nav-items {
@@ -151,8 +151,15 @@ input[type='text'] {
   cursor: pointer;
 }
 
+#addbook {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding: 0 1rem;
+}
+
 .logo {
   text-decoration: none;
+  margin-left: 1rem;
 }
 
 /* Contact section */
@@ -202,5 +209,5 @@ footer {
 /* Date */
 #date {
   text-align: right;
-  margin-right: 9rem;
+  margin-right: 3rem;
 }
