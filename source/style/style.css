@@ -29,11 +29,23 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Main Display */
+#add-book,
+#contact-section {
+  display: none;
+}
+
 .hero-container {
   display: flex;
   flex-direction: column;
   width: 50%;
   margin: 0 auto;
+}
+
+.hero-container h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .title {
@@ -48,6 +60,11 @@ body {
   border: 2px solid #000;
   border-radius: 10px;
   margin: 35px 0;
+}
+
+#book-list {
+  width: 50%;
+  margin: 0 auto;
 }
 
 .book-card {
@@ -135,4 +152,48 @@ input[type='text'] {
 
 .logo {
   text-decoration: none;
+}
+
+/* Contact section */
+#contact-section {
+  width: 50%;
+  margin: 3rem auto 0;
+}
+
+#contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+#contact-section p {
+  font-size: 1.2rem;
+  font-family: 'sm';
+  margin-bottom: 1.5rem;
+}
+
+#contact-section p #break-line {
+  display: block;
+  font-size: 1.2rem;
+  font-family: 'sm';
+  margin-bottom: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+#contact-section ul {
+  list-style: disc;
+  margin-left: 2rem;
+}
+
+#contact-section ul li {
+  margin-bottom: 0.8rem;
+}
+
+footer {
+  border-top: 1px solid #dcdcdc;
+  padding: 1rem;
+  position: absolute;
+  top: 90%;
+  width: 100%;
+  text-align: center;
 }
