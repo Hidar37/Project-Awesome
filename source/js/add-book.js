@@ -6,7 +6,12 @@ const bookContainer = document.getElementById('book-store');
 const form = document.getElementById('adding-book-form');
 const bookTitle = document.getElementById('title');
 const bookAuthor = document.getElementById('author');
-// const addBtn = document.getElementById('add-btn');
+const bookNav = document.getElementById('booklist');
+const addBookNav = document.getElementById('addbook');
+const contactNav = document.getElementById('contact');
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const dateDisplay = document.getElementById('date');
+
 let bookList = [];
 
 class AwesomeBook {
@@ -59,6 +64,23 @@ class AwesomeBook {
   }
 }
 
+function showDate() {
+  const dateObj = new Date();
+  const month = months[dateObj.getMonth()];
+  const day = dateObj.getDay();
+  const year = dateObj.getFullYear();
+  const hour = dateObj.getHours();
+  const minutes = dateObj.getMinutes();
+  const secnod = dateObj.getSeconds();
+  let amPM = null;
+  if (hour >= 12) {
+    amPM = 'PM';
+  } else {
+    amPM = 'AM';
+  }
+  dateDisplay.innerText = `${month} ${day}th ${year}, ${hour}:${minutes}:${secnod}${amPM}`;
+}
+
 const bookObj = new AwesomeBook(bookTitle, bookAuthor);
 
 if (localStorage.getItem('book') !== null) {
@@ -66,8 +88,28 @@ if (localStorage.getItem('book') !== null) {
   bookObj.addBook();
 }
 
+setInterval(showDate, 1000);
 // Add Button and create local storage
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   bookObj.displayBooks();
+});
+
+// Navigation
+bookNav.addEventListener('click', () => {
+  document.getElementById('book-list').style.display = 'block';
+  document.getElementById('add-book').style.display = 'none';
+  document.getElementById('contact-section').style.display = 'none';
+});
+
+addBookNav.addEventListener('click', () => {
+  document.getElementById('book-list').style.display = 'none';
+  document.getElementById('add-book').style.display = 'block';
+  document.getElementById('contact-section').style.display = 'none';
+});
+
+contactNav.addEventListener('click', () => {
+  document.getElementById('book-list').style.display = 'none';
+  document.getElementById('add-book').style.display = 'none';
+  document.getElementById('contact-section').style.display = 'block';
 });
